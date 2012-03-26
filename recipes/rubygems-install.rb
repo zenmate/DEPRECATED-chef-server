@@ -171,10 +171,9 @@ when "runit"
     restart_command "sv int chef-server"
   end
 
-  if node['chef_server']['webui_enabled']
-    service "chef-server-webui" do
-      restart_command "sv int chef-server-webui"
-    end
+  service "chef-server-webui" do
+    restart_command "sv int chef-server-webui"
+    only_if { node['chef_server']['webui_enabled'] }
   end
 
 when "init"
