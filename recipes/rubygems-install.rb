@@ -57,7 +57,7 @@ when "debian"
   include_recipe "chef-server::rabbitmq"
   include_recipe "gecode"
 
-when "centos","redhat","fedora"
+when "amazon","centos","redhat","scientific","fedora"
 
   include_recipe "couchdb"
   include_recipe "java"
