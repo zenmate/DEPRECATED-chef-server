@@ -42,7 +42,7 @@ bash "Create SSL Certificates" do
   not_if { ::File.exists?("/etc/chef/certificates/chef-server-proxy.pem") }
 end
 
-template "#{node[:nginx][:dir]}/sites-available/chef_server_proxy.conf" do
+template "#{node['nginx']['dir']}/sites-available/chef_server_proxy.conf" do
   source "chef_server.nginx.conf.erb"
   owner "root"
   group "root"
