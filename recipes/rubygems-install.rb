@@ -217,7 +217,7 @@ when "init"
       to "#{node['languages']['ruby']['bin_dir']}/#{svc}"
     end
 
-    service "#{svc}" do
+    service svc do
       supports :status => true
       action [ :enable, :start ]
     end
