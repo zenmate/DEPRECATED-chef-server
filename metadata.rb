@@ -10,4 +10,5 @@ supports 'centos'
 supports 'amazon'
 supports 'ubuntu'
 
-# depends 'git'
+depends 'git'
+depends 'iptables'
